@@ -1,0 +1,28 @@
+<div class="modal-header">
+    <h1>Модели автомобилей</h1>
+</div>
+
+<div class="col-lg-8" ng-controller="postText" >
+
+    <ul class="nav nav-list">
+        <li>
+            <button type="submit" class="btn btn-defoult" ng-click="sendPost()"}> press to add </button> </p>
+            <input type="text" name="name" class="form-control"ng-model="newtestModel" placeholder="Введите название")>
+
+            <a ui-sref="auto_model.view({car_modelId:car_model.id})">
+</a>
+
+        </li>
+        <li ng-repeat="auto_model in auto_models">
+            <a ui-sref="auto_model.view({car_modelId:car_model.id})">{{ auto_model.name }}</a>
+        </li>
+    </ul>
+</div>
+
+<div class="col-lg-8">
+    <div ui-view>
+
+    </div>
+
+</div>
+
